@@ -1,6 +1,6 @@
-FROM gitpod/workspace-full
+FROM conda/miniconda3
 
-USER gitpod
+RUN conda install faiss-cpu -c pytorch
 
-RUN pip install torch torchvision numpy 
+RUN pip install torchvision
 RUN pip install transliterate jieba JapaneseTokenizer
