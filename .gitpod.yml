@@ -1,0 +1,10 @@
+image:
+   file: Dockerfile
+tasks:
+ - before: >
+     export LASER="/workspace/LASER"
+   init: >
+     bash ./install-models.sh &&
+     bash ./install_external_tools.sh
+   command: >
+     bash ./tasks/mldoc/mldoc.sh
